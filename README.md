@@ -4,4 +4,4 @@ This project compares .env and .properties files only with the enable values tha
 
 # How to execute it
 
-node index.js '.env.left' '.env.right'
+npm start './examples/left.properties' './examples/right.properties'
