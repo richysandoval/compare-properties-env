@@ -1,0 +1,32 @@
+{
+  "name": "compare-properties-env",
+  "version": "1.0.0",
+  "description": "This project compares .env and .properties files",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richysandoval/compare-properties-env.git"
+  },
+  "author": "Luis Sandoval",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richysandoval/compare-properties-env/issues"
+  },
+  "homepage": "https://github.com/richysandoval/compare-properties-env#readme",
+  "engines": {
+    "node": ">= 14.16.1",
+    "npm": ">= 6.14.12"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "json-diff": "^0.5.4",
+    "n-readlines": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.25.0"
+  }
+}
