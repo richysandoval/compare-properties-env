@@ -2,34 +2,34 @@
  * Common Library
  * This Library contains common functions used in the project.
  */
-import { parse } from 'dotenv';
-import lineByLine from 'n-readlines';
+import { parse } from 'dotenv'
+import LineByLine from 'n-readlines'
 
-function ValidateLine(line){
-    if( line !== '' && line !== '{}' ){
-        return (! line.startsWith("#") )
-    }
-    else return false;
+function ValidateLine (line) {
+  if (line !== '' && line !== '{}') {
+    return (!line.startsWith('#'))
+  } else return false
 }
 
 /**
  * Parses a filename into json array object
- * @param {string} filename 
+ * @param {string} filename
  * @returns {array(json)} Json Array object
  */
-function ParseFile(filename){
-    let fileParsed = [];
-    const liner = new lineByLine(filename);
-    let line;
+function ParseFile (filename) {
+  const fileParsed = []
+  const liner = new LineByLine(filename)
+  let line
 
-    while (line = liner.next()) {
-        if(ValidateLine(line.toString())) {
-            const prop = parse(line)
-            fileParsed.push(prop)
-        }
+  // eslint-disable-next-line no-cond-assign
+  while (line = liner.next()) {
+    if (ValidateLine(line.toString())) {
+      const prop = parse(line)
+      fileParsed.push(prop)
     }
-    return fileParsed;
+  }
+  return fileParsed
 }
 
-const _ParseFile = ParseFile;
-export { _ParseFile as ParseFile };
+const _ParseFile = ParseFile
+export { _ParseFile as ParseFile }
